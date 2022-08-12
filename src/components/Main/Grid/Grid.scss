@@ -1,0 +1,11 @@
+.grid {
+  justify-content: center;
+  margin: 0 0 26px;
+  display: grid;
+  grid-template-columns: 360px 664px;
+  grid-template-rows: 410px 472px;
+  grid-gap: 24px;
+  grid-template-areas: 
+            "search results"
+            "favorites results"
+}
