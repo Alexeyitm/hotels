@@ -3,11 +3,15 @@ import './Main.scss';
 import Header from './Header/Header';
 import Grid from './Grid/Grid';
 
-function Main() {
+function Main({ initialState, sortState, setSortState }) {
   return (
     <div className="main">
       <Header/>
-      <Grid/>
+      <Grid
+        initialState={initialState}
+        sortState={sortState}
+        setSortState={setSortState}
+      />
     </div>
   );
 }

@@ -43,6 +43,11 @@
     cursor: pointer;
     text-align: left;
 
+    &_active {
+      border: 1px solid #41522E;
+      color: #41522E;
+    }
+
     &_rating {
       width: 89px;
     }
@@ -55,9 +60,20 @@
   &__sort {
     width: 8.5px;
     height: 12px;
-    background: url(../../../../images/sort.svg) no-repeat;
     position: absolute;
     top: 8px;
     right: 12.5px;
+
+    &_default {
+      background: url(../../../../images/sort.svg) no-repeat;
+    }
+
+    &_high {
+      background: url(../../../../images/sort-high.svg) no-repeat;
+    }
+
+    &_low {
+      background: url(../../../../images/sort-low.svg) no-repeat;
+    }
   }
 }

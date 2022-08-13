@@ -4,11 +4,14 @@ import Search from './Search/Search';
 import Favorites from './Favorites/Favorites';
 import Content from './Content/Content';
 
-function Grid() {
+function Grid({ initialState, sortState, setSortState }) {
   return (
     <div className="grid">
-      <Search/>
-      <Favorites/>
+      <Search initialState={initialState}/>
+      <Favorites
+        sortState={sortState}
+        setSortState={setSortState}
+      />
       <Content/>
     </div>
   );
