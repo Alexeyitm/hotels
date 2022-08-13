@@ -1,7 +1,25 @@
 import React from 'react';
 import './Search.scss';
 
-function Search({ initialState }) {
+function Search({ formSearchState, setFormSearchState, getHotels }) {
+  
+  const handleClickLocation = (e) => {
+    setFormSearchState({location: e.target.value, checkIn: formSearchState.checkIn, days: formSearchState.days});
+  }
+
+  const handleClickDate = (e) => {
+    setFormSearchState({location: formSearchState.location, checkIn: e.target.value, days: formSearchState.days});
+  }
+
+  const handleClickDays = (e) => {
+    setFormSearchState({location: formSearchState.location, checkIn: formSearchState.checkIn, days: e.target.value});
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getHotels(formSearchState.location, formSearchState.checkIn, formSearchState.days);
+  }
+
   return (
     <form 
       className="search"
@@ -18,7 +36,8 @@ function Search({ initialState }) {
         className="search__input"
         type="text" id="location"
         name="location"
-        defaultValue={initialState.location}
+        onChange={handleClickLocation}
+        defaultValue={formSearchState.location}
       >
       </input>
 
@@ -32,7 +51,8 @@ function Search({ initialState }) {
         type="date"
         id="date"
         name="date"
-        defaultValue={initialState.date}
+        onChange={handleClickDate}
+        defaultValue={formSearchState.checkIn}
       >
       </input>
 
@@ -46,7 +66,8 @@ function Search({ initialState }) {
         type="number"
         id="days"
         name="days"
-        defaultValue={initialState.days}
+        onChange={handleClickDays}
+        defaultValue={formSearchState.days}
       >
       </input>
 
@@ -54,6 +75,7 @@ function Search({ initialState }) {
         className="search__button"
         type="submit"
         form="search"
+        onClick={handleSubmit}
       >Найти
       </button>
 

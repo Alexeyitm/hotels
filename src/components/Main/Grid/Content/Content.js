@@ -3,7 +3,7 @@ import './Content.scss';
 import Carousel from './Carousel/Carousel';
 import Hotels from './Hotels/Hotels';
 
-function Content() {
+function Content({cardsState}) {
   return (
     <div className="content">
       <h2 className="content__title">
@@ -15,7 +15,7 @@ function Content() {
           Добавлено в Избранное:&nbsp;
           <span className="content__count-number">3 отеля</span>
         </p>
-        <Hotels/>
+        <Hotels cardsState={cardsState}/>
       </h2>
     </div>
   );

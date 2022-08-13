@@ -4,15 +4,28 @@ import Search from './Search/Search';
 import Favorites from './Favorites/Favorites';
 import Content from './Content/Content';
 
-function Grid({ initialState, sortState, setSortState }) {
+function Grid({
+  formSearchState,
+  setFormSearchState,
+  sortState,
+  setSortState,
+  getHotels,
+  cardsState
+}) {
   return (
     <div className="grid">
-      <Search initialState={initialState}/>
+      <Search 
+        formSearchState={formSearchState}
+        setFormSearchState={setFormSearchState}
+        getHotels={getHotels}
+      />
       <Favorites
         sortState={sortState}
         setSortState={setSortState}
       />
-      <Content/>
+      <Content
+        cardsState={cardsState}
+      />
     </div>
   );
 }
