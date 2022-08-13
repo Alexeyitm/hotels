@@ -1,5 +1,6 @@
 import React from 'react';
 import './Favorites.scss';
+import Items from './Items/Items';
 
 function Favorites() {
   return (
@@ -13,6 +14,7 @@ function Favorites() {
           Цена <div className="favorites__sort"></div>
           </button>
       </div>
+      <Items/>
     </div>
   );
 }

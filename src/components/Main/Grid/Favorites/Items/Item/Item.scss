@@ -1,0 +1,89 @@
+.item {
+  position: relative;
+  width: 296px;
+  height: 74px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    margin-top: 15px;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(135, 135, 135, 0.2);
+    border-radius: 8px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+
+  &__title {
+    width: fit-content;
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #424242;
+  }
+
+  &__like {
+    width: 21px;
+    height: 18px;
+    margin-left: auto;
+    background: url(../../../../../../images/like-active.svg) no-repeat;
+  }
+
+  &__date {
+    width: 100%;
+    margin: 4px 0 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #878787;
+  }
+
+  &__stars {
+    width: 99px;
+    height: 17px;
+    background: url(../../../../../../images/three-stars.svg) no-repeat;
+  }
+
+  &__price {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: #878787;
+  }
+
+  &__number {
+    margin-left: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: right;
+    letter-spacing: -0.408px;
+    color: #424242;
+  }
+}
