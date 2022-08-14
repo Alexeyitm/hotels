@@ -1,6 +1,8 @@
+@use './styles/variables/variables.scss';
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  font-family: variables.$font;
+  font-style: variables.$font-style;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -12,7 +12,7 @@ class Api {
   }
 
   getHotels(place, checkIn, checkOut) {
-    return fetch(`${this._baseUrl}?limit=20&currency=rub&location=${place}&checkIn=${checkIn}&checkOut=${checkOut}`, {
+    return fetch(`${this._baseUrl}?limit=10&currency=rub&location=${place}&checkIn=${checkIn}&checkOut=${checkOut}`, {
       method: 'GET',
     })
     .then(res => this._getJSON(res))

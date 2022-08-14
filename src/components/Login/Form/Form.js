@@ -2,6 +2,10 @@ import React from 'react';
 import './Form.scss';
 
 function Form() {
+  const handleLogin = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <form className="form" name="login" id="login">
       <h2 className="form__title">Simple Hotel Check</h2>
@@ -9,7 +13,7 @@ function Form() {
       <input className="form__input" type="email" id="email" name="email"></input>
       <label className="form__label" htmlFor="password">Пароль</label>
       <input className="form__input" type="password" id="password" name="password"></input>
-      <button className="form__button" type="submit" form="login">Войти</button>
+      <button className="form__button" type="submit" form="login" onClick={handleLogin}>Войти</button>
     </form>
   );
 }

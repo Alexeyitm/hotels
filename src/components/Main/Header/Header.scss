@@ -1,21 +1,19 @@
+@use '../../../styles/variables/variables.scss';
+
 .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
 
   &__title {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
-    color: #424242;
+    color: variables.$second-color;
     margin: 32px 0 32px 32px;
   }
 
   &__button {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -27,7 +25,7 @@
     height: max-content;
     margin: 36px 68px 0 0;
     position: relative;
-    cursor: pointer;
+    cursor: variables.$cursor-hover;
   }
 
   &__exit {

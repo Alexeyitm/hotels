@@ -1,3 +1,5 @@
+@use '.././variables/variables.scss';
+
 .item {
   position: relative;
   width: 296px;
@@ -31,24 +33,22 @@
   &__title {
     width: fit-content;
     margin: 0;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 22px;
     letter-spacing: -0.408px;
-    color: #424242;
+    color: variables.$second-color;
   }
 
   &__like {
     width: 21px;
     height: 18px;
     margin-left: auto;
-    background: url(../images/like-active.svg) no-repeat;
-    cursor: pointer;
+    background: variables.$like-active no-repeat;
+    cursor: variables.$cursor-hover;
 
     &_main {
-      background: url(../images/like.svg) no-repeat;
+      background: variables.$like no-repeat;
       background-size: contain;
     }
   }
@@ -56,8 +56,6 @@
   &__date {
     width: 100%;
     margin: 4px 0 10px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
@@ -72,7 +70,28 @@
   &__stars {
     width: 99px;
     height: 17px;
-    background: url(../images/three-stars.svg) no-repeat;
+
+    &_one {
+      background: url(../../images/one-star.svg) no-repeat;
+    }
+
+    &_two {
+      background: url(../../images/two-stars.svg) no-repeat;
+    }
+
+    &_three {
+      width: 99px;
+      height: 17px;
+      background: url(../../images/three-stars.svg) no-repeat;
+    }
+
+    &_four {
+      background: url(../../images/four-stars.svg) no-repeat;
+    }
+
+    &_five {
+      background: url(../../images/five-stars.svg) no-repeat;
+    }
   }
 
   &__price {
@@ -80,8 +99,6 @@
     right: 0;
     bottom: 3px;
     margin: 0;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 300;
     font-size: 11px;
     line-height: 22px;
@@ -91,13 +108,11 @@
 
   &__number {
     margin-left: 16px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 22px;
     text-align: right;
     letter-spacing: -0.408px;
-    color: #424242;
+    color: variables.$second-color;
   }
 }

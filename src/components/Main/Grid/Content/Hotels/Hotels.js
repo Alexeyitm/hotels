@@ -2,10 +2,17 @@ import React from 'react';
 import './Hotels.scss';
 import Hotel from './Hotel/Hotel';
 
-function Hotels({ cardsState }) {
-  console.log(cardsState)
+function Hotels({ cardsState, dateState }) {
+  
   return (
-    <div  className="hotels">
+    <div className="hotels">
+      {cardsState?.map(card =>
+        <Hotel
+          key={card.hotelId}
+          card={card}
+          dateState={dateState}
+        />
+      )}
     </div>
   );
 }

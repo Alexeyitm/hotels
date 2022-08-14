@@ -10,6 +10,7 @@ function Main({
   setSortState,
   getHotels,
   cardsState,
+  dateState
 }) {
   return (
     <div className="main">
@@ -21,6 +22,7 @@ function Main({
         setSortState={setSortState}
         getHotels={getHotels}
         cardsState={cardsState}
+        dateState={dateState}
       />
     </div>
   );
