@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, Navigate } from 'react-router';
 import { useCookies } from 'react-cookie';
 import './App.scss';
@@ -40,42 +39,40 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="app">
-        <Routes>
-          <Route
-            path='login'
-            element={
-              cookies.auth ? 
-              <Navigate to="/"/> : 
-              <Login
-                setCookie={setCookie}
-              />}
-          />
-          <Route 
-            path='/'
-            element={
-              cookies.auth ? 
-              <Main
-                formSearchState={formSearchState}
-                setFormSearchState={setFormSearchState}
-                sortState={sortState}
-                setSortState={setSortState}
-                getHotels={getHotels}
-                cardsState={cardsState}
-                dateState={dateState}
-                removeCookie={removeCookie}
-              /> :
-              <Navigate to="login"/>
-            }
-          />
-          <Route
-            path="*"
-            element={<Navigate to="login" replace/>}
-          />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="app">
+      <Routes>
+        <Route
+          path='login'
+          element={
+            cookies.auth ? 
+            <Navigate to="/"/> : 
+            <Login
+              setCookie={setCookie}
+            />}
+        />
+        <Route 
+          path='/'
+          element={
+            cookies.auth ? 
+            <Main
+              formSearchState={formSearchState}
+              setFormSearchState={setFormSearchState}
+              sortState={sortState}
+              setSortState={setSortState}
+              getHotels={getHotels}
+              cardsState={cardsState}
+              dateState={dateState}
+              removeCookie={removeCookie}
+            /> :
+            <Navigate to="login"/>
+          }
+        />
+        <Route
+          path="*"
+          element={<Navigate to="login" replace/>}
+        />
+      </Routes>
+    </div>
   );
 }
 

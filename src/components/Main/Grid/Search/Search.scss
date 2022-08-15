@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   background: variables.$main-color;
-  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+  box-shadow: variables.$block-shadow;
   border-radius: 16px;
 
   &__label {

@@ -1,13 +1,14 @@
 @use '../../../styles/variables/variables.scss';
 
 .form {
-  position: absolute;
   width: 409px;
   height: 382px;
-  left: calc(50% - 409px / 2 - 0.5px);
-  top: calc(50% - 382px / 2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: variables.$main-color;
-  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+  box-shadow: variables.$block-shadow;
   border-radius: 16px;
   z-index: 1;
   padding: 32px;
@@ -36,7 +37,7 @@
     margin-bottom: 7px;
 
     &_invalid {
-      color: #EB1717;
+      color: variables.$invalid-color;
     }
   }
 
@@ -48,7 +49,7 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 14px;
-    color: #EB1717;
+    color: variables.$invalid-color;
 
     &_invalid {
       visibility: visible;
@@ -66,7 +67,7 @@
     margin-bottom: 24px;
 
     &_invalid {
-      color: #EB1717;
+      color: variables.$invalid-color;
     }
   }
 
