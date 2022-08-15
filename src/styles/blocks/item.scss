@@ -47,7 +47,7 @@
     background: variables.$like-active no-repeat;
     cursor: variables.$cursor-hover;
 
-    &_main {
+    &_inactive {
       background: variables.$like no-repeat;
       background-size: contain;
     }

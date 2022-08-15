@@ -76,6 +76,7 @@ function Search({ formSearchState, setFormSearchState, getHotels }) {
         type="submit"
         form="search"
         onClick={handleSubmit}
+        disabled={formSearchState.location && formSearchState.checkIn && formSearchState.days ? false : true}
       >Найти
       </button>
 
