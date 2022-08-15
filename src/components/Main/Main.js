@@ -11,7 +11,9 @@ function Main({
   getHotels,
   cardsState,
   dataState,
-  removeCookie
+  removeCookie,
+  favoriteCardsState,
+  setFavoriteCardsState
 }) {
   return (
     <div className="main">
@@ -26,6 +28,8 @@ function Main({
         getHotels={getHotels}
         cardsState={cardsState}
         dataState={dataState}
+        favoriteCardsState={favoriteCardsState}
+        setFavoriteCardsState={setFavoriteCardsState}
       />
     </div>
   );

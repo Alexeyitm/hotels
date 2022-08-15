@@ -31,6 +31,7 @@ function App() {
     days: "",
   });
   const [cardsState, setCardsState] = useState();
+  const [favoriteCardsState, setFavoriteCardsState] = useState([]);
   const [sortState, setSortState] = useState({ rating: 1, price: 0});
 
   useEffect(() => {
@@ -63,6 +64,8 @@ function App() {
               cardsState={cardsState}
               dataState={dataState}
               removeCookie={removeCookie}
+              favoriteCardsState={favoriteCardsState}
+              setFavoriteCardsState={setFavoriteCardsState}
             /> :
             <Navigate to="login"/>
           }

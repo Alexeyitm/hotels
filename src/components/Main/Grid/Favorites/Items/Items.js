@@ -2,14 +2,15 @@ import React from 'react';
 import './Items.scss';
 import Item from './Item/Item';
 
-function Items() {
+function Items({ favoriteCardsState }) {
   return (
     <div className="items">
-      <Item/>
-      <Item/>
-      <Item/>
-      <Item/>
-      <Item/>
+      {favoriteCardsState.map(card =>
+        <Item
+          key={card.hotelId}
+          card={card}
+        />
+      )}
     </div>
   );
 }

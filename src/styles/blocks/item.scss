@@ -31,7 +31,11 @@
   }
 
   &__title {
-    width: fit-content;
+    max-width: 92.5%;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin: 0;
     font-weight: 300;
     font-size: 17px;

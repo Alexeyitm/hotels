@@ -2,7 +2,11 @@ import React from 'react';
 import './Favorites.scss';
 import Items from './Items/Items';
 
-function Favorites({ sortState, setSortState }) {
+function Favorites({
+  sortState,
+  setSortState,
+  favoriteCardsState
+}) {
 
   const handleClickRating = () => {
     setSortState({rating: sortState.rating += 1, price: 0})
@@ -35,7 +39,7 @@ function Favorites({ sortState, setSortState }) {
           ></div>
         </button>
       </div>
-      <Items/>
+      <Items favoriteCardsState={favoriteCardsState}/>
     </div>
   );
 }

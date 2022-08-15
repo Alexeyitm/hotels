@@ -1,16 +1,21 @@
 import React from 'react';
 import './Item.scss';
+import makePrice from '../../../../../.././scripts/makePrice';
+const plural = require('plural-ru');
 
-function Item() {
+function Item({ card }) {
+
   return (
     <div className="item">
-      <h3 className="item__title">Moscow Marriott Grand Hotel</h3>
+      <h3 className="item__title">{card.hotelName}</h3>
       <div className="item__like"></div>
-      <p className="item__date">28 June, 2020 - 1 день</p>
+      <p className="item__date">
+        {card.date} - {plural(card.days, "%d день", "%d дня", "%d дней")}
+      </p>
       <div className="item__stars"></div>
       <p className="item__price">
         Price:
-        <span className="item__number">23 924 ₽</span>
+        <span className="item__number">{makePrice(card.priceAvg)}</span>
       </p>
     </div>
   );

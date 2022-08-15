@@ -1,14 +1,31 @@
 import {useState} from 'react';
 import './Hotel.scss';
 import makePrice from '../../../../../.././scripts/makePrice';
+const plural = require('plural-ru');
 
-function Hotel({ card, date, days }) {
-
-  const plural = require('plural-ru');
+function Hotel({
+  card,
+  date,
+  days,
+  favoriteCardsState,
+  setFavoriteCardsState,
+}) {
   const [likeState, setLikeState] = useState(false);
 
+  const addFavoriteCard = () => {
+    setLikeState(true);
+    card.date = date[1];
+    card.days = days;
+    setFavoriteCardsState([...favoriteCardsState, card]);
+  }
+
+  const removeFavoriteCard = () => {
+    setLikeState(false);
+    setFavoriteCardsState(favoriteCardsState.filter(favoriteCard => favoriteCard.hotelId !== card.hotelId));
+  }
+  
   const handleClickLike = () =>{
-    setLikeState(!likeState);
+    !likeState ? addFavoriteCard() : removeFavoriteCard();
   }
 
   return (
@@ -22,7 +39,7 @@ function Hotel({ card, date, days }) {
         >
         </div>
         <p className="item__date item__date_main">
-          {date} - {plural(days, "%d день", "%d дня", "%d дней")}
+          {date[0]} - {plural(days, "%d день", "%d дня", "%d дней")}
         </p>
         <div
           className={"item__stars" + (card.stars === 5 ? " item__stars_five" : 

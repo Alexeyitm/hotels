@@ -2,7 +2,13 @@ import React from 'react';
 import './Hotels.scss';
 import Hotel from './Hotel/Hotel';
 
-function Hotels({ cardsState, date, days }) {
+function Hotels({
+  favoriteCardsState,
+  setFavoriteCardsState,
+  cardsState,
+  date,
+  days
+}) {
   
   return (
     <div className="hotels">
@@ -12,6 +18,8 @@ function Hotels({ cardsState, date, days }) {
           card={card}
           date={date}
           days={days}
+          favoriteCardsState={favoriteCardsState}
+          setFavoriteCardsState={setFavoriteCardsState}
         />
       )}
     </div>

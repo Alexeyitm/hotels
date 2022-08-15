@@ -11,7 +11,9 @@ function Grid({
   setSortState,
   getHotels,
   cardsState,
-  dataState
+  dataState,
+  favoriteCardsState,
+  setFavoriteCardsState
 }) {
   return (
     <div className="grid">
@@ -23,10 +25,13 @@ function Grid({
       <Favorites
         sortState={sortState}
         setSortState={setSortState}
+        favoriteCardsState={favoriteCardsState}
       />
       <Content
         cardsState={cardsState}
         dataState={dataState}
+        favoriteCardsState={favoriteCardsState}
+        setFavoriteCardsState={setFavoriteCardsState}
       />
     </div>
   );
