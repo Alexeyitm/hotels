@@ -2,7 +2,7 @@ import React from 'react';
 import './Hotels.scss';
 import Hotel from './Hotel/Hotel';
 
-function Hotels({ cardsState, dateState }) {
+function Hotels({ cardsState, date, days }) {
   
   return (
     <div className="hotels">
@@ -10,7 +10,8 @@ function Hotels({ cardsState, dateState }) {
         <Hotel
           key={card.hotelId}
           card={card}
-          dateState={dateState}
+          date={date}
+          days={days}
         />
       )}
     </div>

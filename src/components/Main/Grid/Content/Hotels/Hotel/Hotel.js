@@ -1,7 +1,8 @@
 import React from 'react';
 import './Hotel.scss';
 
-function Hotel({ card, dateState }) {
+function Hotel({ card, date, days }) {
+
   return (
     <div  className="hotel">
 
@@ -10,7 +11,7 @@ function Hotel({ card, dateState }) {
       <div className="item item_main">
         <h3 className="item__title">{card.hotelName}</h3>
         <div className="item__like item__like_main"></div>
-        <p className="item__date item__date_main">{dateState.checkIn} - {dateState.days} день</p>
+        <p className="item__date item__date_main">{date} - {days} день</p>
         <div
           className={"item__stars" + (card.stars === 5 ? " item__stars_five" : 
           card.stars === 4 ? " item__stars_four" :

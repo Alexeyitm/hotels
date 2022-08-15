@@ -10,7 +10,7 @@ function Main({
   setSortState,
   getHotels,
   cardsState,
-  dateState,
+  dataState,
   removeCookie
 }) {
   return (
@@ -25,7 +25,7 @@ function Main({
         setSortState={setSortState}
         getHotels={getHotels}
         cardsState={cardsState}
-        dateState={dateState}
+        dataState={dataState}
       />
     </div>
   );

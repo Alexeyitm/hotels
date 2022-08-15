@@ -15,7 +15,7 @@ function App() {
     api
       .getHotels(location, checkIn, checkOut)
       .then(res => setCardsState(res))
-      .then(() => setDateState({location, checkIn, days}))
+      .then(() => setDataState({location, checkIn, days}))
       .catch((err) => console.log(err))
   }
 
@@ -25,7 +25,7 @@ function App() {
     checkIn: makeValidDate(new Date()),
     days: 1,
   });
-  const [dateState, setDateState] = useState({
+  const [dataState, setDataState] = useState({
     location: "",
     checkIn: "",
     days: "",
@@ -61,7 +61,7 @@ function App() {
               setSortState={setSortState}
               getHotels={getHotels}
               cardsState={cardsState}
-              dateState={dateState}
+              dataState={dataState}
               removeCookie={removeCookie}
             /> :
             <Navigate to="login"/>

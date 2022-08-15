@@ -11,7 +11,7 @@ function Grid({
   setSortState,
   getHotels,
   cardsState,
-  dateState
+  dataState
 }) {
   return (
     <div className="grid">
@@ -26,7 +26,7 @@ function Grid({
       />
       <Content
         cardsState={cardsState}
-        dateState={dateState}
+        dataState={dataState}
       />
     </div>
   );

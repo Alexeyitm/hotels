@@ -2,14 +2,18 @@ import React from 'react';
 import './Content.scss';
 import Carousel from './Carousel/Carousel';
 import Hotels from './Hotels/Hotels';
+import makeDate from '../../../../scripts/makeDate';
 
-function Content({ cardsState, dateState }) {
+function Content({ cardsState, dataState }) {
+
+  const date = makeDate(dataState.checkIn, 'ru');
+
   return (
     <div className="content">
       <h2 className="content__title">
         Отели:
-        <span className="content__place">Москва</span>
-        <span className="content__date">07 июля 2020</span>
+        <span className="content__place">{dataState.location}</span>
+        <span className="content__date">{date}</span>
         <Carousel/>
         <p className="content__count">
           Добавлено в Избранное:&nbsp;
@@ -17,7 +21,8 @@ function Content({ cardsState, dateState }) {
         </p>
         <Hotels
           cardsState={cardsState}
-          dateState={dateState}
+          date={date}
+          days={dataState.days}
         />
       </h2>
     </div>
