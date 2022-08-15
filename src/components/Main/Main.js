@@ -10,11 +10,14 @@ function Main({
   setSortState,
   getHotels,
   cardsState,
-  dateState
+  dateState,
+  removeCookie
 }) {
   return (
     <div className="main">
-      <Header/>
+      <Header
+        removeCookie={removeCookie}
+      />
       <Grid
         formSearchState={formSearchState}
         setFormSearchState={setFormSearchState}

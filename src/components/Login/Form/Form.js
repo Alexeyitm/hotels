@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Form.scss';
 import EmailValidator from 'email-validator';
 
-function Form() {
-
-  const navigate = useNavigate();
+function Form({ setCookie }) {
 
   const [userDataState, setUserDataState] = useState({email: '', password: ''});
   const [validEmail, setValidEmail] = useState(true);
@@ -23,8 +20,7 @@ function Form() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    navigate('/');
-    localStorage.setItem('user', userDataState);
+    setCookie('auth', true);
   }
 
   return (

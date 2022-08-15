@@ -2,10 +2,12 @@ import React from 'react';
 import './Login.scss';
 import Form from './Form/Form';
 
-function Login() {
+function Login({ setCookie }) {
   return (
     <div className="login">
-      <Form/>
+      <Form
+        setCookie={setCookie}
+      />
     </div>
   );
 }

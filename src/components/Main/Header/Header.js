@@ -1,15 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Header.scss';
 
-function Header() {
-
-  const navigate = useNavigate();
+function Header({ removeCookie }) {
 
   const handleClickExit = () => {
-    //navigate('/login');
-    localStorage.removeItem('user');
-    console.log(localStorage.user)
+    removeCookie('auth')
   }
 
   return (

@@ -1,27 +1,14 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, Navigate } from 'react-router';
+import { useCookies } from 'react-cookie';
 import './App.scss';
 import { api } from '../api/Api'
 import Login from './Login/Login';
 import Main from './Main/Main';
+import makeValidDate from '../scripts/makeValidDate';
 
 function App() {
-
-  const makeValidDate = (date) => {
-    let validDate = date.getFullYear();
-    if ((date.getMonth() + 1).length === 1) {
-      validDate += "-" + (date.getMonth() + 1)
-    } else {
-      validDate += "-0" + (date.getMonth() + 1)
-    }
-    if (date.getDate().length === 1) {
-      validDate += "-0" + (date.getDate())
-    } else {
-      validDate += "-" + (date.getDate())
-    }
-    return validDate;
-  }
 
   const getHotels = (location, checkIn, days) => {
     let dateArr = checkIn.split('-');
@@ -35,7 +22,7 @@ function App() {
       .catch((err) => console.log(err))
   }
 
-  const [userAuth, setUserAuth] = useState({});
+  const [cookies, setCookie, removeCookie] = useCookies(['auth']);;
   const [formSearchState, setFormSearchState] = useState({
     location: "Москва",
     checkIn: makeValidDate(new Date()),
@@ -54,22 +41,23 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    setUserAuth(localStorage.user);
-  });
-
   return (
     <BrowserRouter>
       <div className="app">
         <Routes>
           <Route
             path='login'
-            element={userAuth ? <Navigate to="/"/> : <Login/>}
+            element={
+              cookies.auth ? 
+              <Navigate to="/"/> : 
+              <Login
+                setCookie={setCookie}
+              />}
           />
           <Route 
             path='/'
-            element={ 
-              userAuth ?
+            element={
+              cookies.auth ? 
               <Main
                 formSearchState={formSearchState}
                 setFormSearchState={setFormSearchState}
@@ -78,6 +66,7 @@ function App() {
                 getHotels={getHotels}
                 cardsState={cardsState}
                 dateState={dateState}
+                removeCookie={removeCookie}
               /> :
               <Navigate to="login"/>
             }
