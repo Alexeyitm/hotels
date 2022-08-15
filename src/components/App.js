@@ -7,18 +7,16 @@ import { api } from '../api/Api'
 import Login from './Login/Login';
 import Main from './Main/Main';
 import makeValidDate from '../scripts/makeValidDate';
+import makeCheckOut from '../scripts/makeCheckOut';
 
 function App() {
 
   const getHotels = (location, checkIn, days) => {
-    let dateArr = checkIn.split('-');
-    let date = new Date(dateArr[0], dateArr[1] - 1, dateArr[2]);
-    let newDate = new Date(date.setDate(date.getDate() + Number(days)));
-    let checkOut = makeValidDate(newDate);
+    const checkOut = makeCheckOut(checkIn, days);
     api
       .getHotels(location, checkIn, checkOut)
       .then(res => setCardsState(res))
-      .then(res => setDateState({location, checkIn, days}))
+      .then(() => setDateState({location, checkIn, days}))
       .catch((err) => console.log(err))
   }
 

@@ -27,6 +27,7 @@
   }
 
   &__label {
+    position: relative;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -36,6 +37,21 @@
 
     &_invalid {
       color: #EB1717;
+    }
+  }
+
+  &__message {
+    visibility: hidden;
+    position: absolute;
+    top: 83px;
+    left: 0;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #EB1717;
+
+    &_invalid {
+      visibility: visible;
     }
   }
 

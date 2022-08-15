@@ -31,6 +31,9 @@ function Form({ setCookie }) {
         className={"form__label" + (!validEmail ? " form__label_invalid" : "")}
         htmlFor="email"
       >Логин
+        <span className={"form__message"  + (!validEmail ? " form__message_invalid" : "")}>
+          Введите корректный email
+        </span>
       </label>
       <input
         className={"form__input" + (!validEmail ? " form__input_invalid" : "")}
@@ -44,6 +47,9 @@ function Form({ setCookie }) {
         className={"form__label" + (!validPassword ? " form__label_invalid" : "")}
         htmlFor="password"
       >Пароль
+        <span className={"form__message"  + (!validPassword ? " form__message_invalid" : "")}>
+          Минимальная длина пароля - 8 символов
+        </span>
       </label>
       <input
         className={"form__input" + (!validPassword ? " form__input_invalid" : "")}
