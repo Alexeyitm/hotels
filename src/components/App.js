@@ -46,10 +46,10 @@ function App() {
           path='login'
           element={
             cookies.auth ? 
-            <Navigate to="/"/> : 
-            <Login
-              setCookie={setCookie}
-            />}
+              <Navigate to="/"/> : 
+              <Login
+                setCookie={setCookie}
+              />}
         />
         <Route 
           path='/'

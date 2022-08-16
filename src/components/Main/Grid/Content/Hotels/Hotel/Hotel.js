@@ -62,13 +62,15 @@ function Hotel({
           card.stars === 3 ? " item__stars_three" : 
           card.stars === 2 ? " item__stars_two" : 
           card.stars === 1 ? " item__stars_one" : "")}
-        ></div>
+        >
+        </div>
         <p className="item__price">
           Price:
-          <span className="item__number">{(days > 0) ? makePrice(card.priceAvg) : "0 ₽"}</span>
+          <span className="item__number">
+            {(days > 0) ? makePrice(card.priceAvg) : "0 ₽"}
+          </span>
         </p>
       </div>
-
     </div>
   );
 }

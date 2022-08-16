@@ -3,6 +3,7 @@ import './Login.scss';
 import Form from './Form/Form';
 
 function Login({ setCookie }) {
+  
   return (
     <div className="login">
       <Form setCookie={setCookie}/>

@@ -1,7 +1,11 @@
 import React from 'react';
 import './Search.scss';
 
-function Search({ formSearchState, setFormSearchState, getHotels }) {
+function Search({
+  formSearchState,
+  setFormSearchState,
+  getHotels
+}) {
   
   const handleClickLocation = (e) => {
     setFormSearchState({location: e.target.value, checkIn: formSearchState.checkIn, days: formSearchState.days});

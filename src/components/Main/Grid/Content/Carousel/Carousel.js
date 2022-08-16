@@ -26,10 +26,10 @@ function Carousel() {
         modules={[FreeMode]}
       >
         {carousel.map(el => 
-          <SwiperSlide
-            className="swiper__slide"
-            key={el}
-          >
+        <SwiperSlide
+          className="swiper__slide"
+          key={el}
+        >
           <img
             className="swiper__img"
             src={el}
@@ -40,7 +40,6 @@ function Carousel() {
         )}
       </Swiper>
     </div>
-
   );
 }
 

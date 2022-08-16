@@ -27,7 +27,8 @@ function Favorites({
         >
           Рейтинг
           <div
-            className={"favorites__sort favorites__sort_default" + (sortState.rating % 2 ? " favorites__sort_high" : sortState.rating === 0 ? "" : " favorites__sort_low")}
+            className={"favorites__sort favorites__sort_default" + (sortState.rating % 2 ?
+              " favorites__sort_high" : sortState.rating === 0 ? "" : " favorites__sort_low")}
           ></div>
         </button>
         <button 
@@ -36,7 +37,8 @@ function Favorites({
         >
           Цена
           <div
-            className={"favorites__sort favorites__sort_default" + (sortState.price % 2 ? " favorites__sort_high" : sortState.price === 0 ? "" : " favorites__sort_low")}
+            className={"favorites__sort favorites__sort_default" + (sortState.price % 2 ? 
+              " favorites__sort_high" : sortState.price === 0 ? "" : " favorites__sort_low")}
           ></div>
         </button>
       </div>

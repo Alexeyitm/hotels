@@ -6,6 +6,7 @@ function Items({
   favoriteCardsState,
   setFavoriteCardsState
 }) {
+  
   return (
     <div className="items">
       {favoriteCardsState.map(card =>

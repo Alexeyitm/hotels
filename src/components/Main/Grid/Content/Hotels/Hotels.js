@@ -10,8 +10,6 @@ function Hotels({
   days
 }) {
 
-
-  
   return (
     <div className="hotels">
       {cardsState?.map(card =>
