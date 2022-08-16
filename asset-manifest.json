@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/hotels/static/css/main.a5144d86.css",
-    "main.js": "/hotels/static/js/main.b42c728c.js",
+    "main.css": "/hotels/static/css/main.538552d9.css",
+    "main.js": "/hotels/static/js/main.ce252fb3.js",
+    "static/media/carousel1.jpg": "/hotels/static/media/carousel1.562a80f67c11c50aab63.jpg",
+    "static/media/carousel7.jpg": "/hotels/static/media/carousel7.f93a32acb1da8b7528e1.jpg",
     "static/media/background.jpg": "/hotels/static/media/background.8694cb2fc5231cd424bc.jpg",
+    "static/media/carousel2.jpg": "/hotels/static/media/carousel2.2950a659fc80b25f3263.jpg",
+    "static/media/carousel3.jpg": "/hotels/static/media/carousel3.dbaf63f0a463e309516d.jpg",
+    "static/media/carousel5.jpg": "/hotels/static/media/carousel5.f400326623cf1c09e76f.jpg",
+    "static/media/carousel6.jpg": "/hotels/static/media/carousel6.2ecc8cfbcd379a497735.jpg",
+    "static/media/carousel4.jpg": "/hotels/static/media/carousel4.433a462751d1ba99bf12.jpg",
+    "static/media/carousel8.jpg": "/hotels/static/media/carousel8.6c67f3c01ffbfb7379b9.jpg",
     "static/media/one-star.svg": "/hotels/static/media/one-star.d248962102eac154b7bf.svg",
     "static/media/two-stars.svg": "/hotels/static/media/two-stars.ec5e259971a6bb780bed.svg",
     "static/media/three-stars.svg": "/hotels/static/media/three-stars.c6445ad0e649e1d2fedd.svg",
     "static/media/four-stars.svg": "/hotels/static/media/four-stars.dc2224e004eec9a36ac4.svg",
     "static/media/five-stars.svg": "/hotels/static/media/five-stars.23d3225c61f1f7043842.svg",
     "static/media/hotel-logo.svg": "/hotels/static/media/hotel-logo.51d05d797890bdb911ff.svg",
+    "static/media/like-hover.svg": "/hotels/static/media/like-hover.ae5224777fb9525e2fbf.svg",
     "static/media/like.svg": "/hotels/static/media/like.12e0baf1a8017f8b5e41.svg",
     "static/media/like-active.svg": "/hotels/static/media/like-active.9eeeed1414023ae91e0f.svg",
     "index.html": "/hotels/index.html",
@@ -17,11 +26,11 @@
     "static/media/sort-high.svg": "/hotels/static/media/sort-high.de36a45dd38902f471e2.svg",
     "static/media/sort-low.svg": "/hotels/static/media/sort-low.434702c9b958c4e3ae74.svg",
     "static/media/content-title-svg.svg": "/hotels/static/media/content-title-svg.ecfc16f7a5f0685dc819.svg",
-    "main.a5144d86.css.map": "/hotels/static/css/main.a5144d86.css.map",
-    "main.b42c728c.js.map": "/hotels/static/js/main.b42c728c.js.map"
+    "main.538552d9.css.map": "/hotels/static/css/main.538552d9.css.map",
+    "main.ce252fb3.js.map": "/hotels/static/js/main.ce252fb3.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5144d86.css",
-    "static/js/main.b42c728c.js"
+    "static/css/main.538552d9.css",
+    "static/js/main.ce252fb3.js"
   ]
 }
