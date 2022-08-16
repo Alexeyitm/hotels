@@ -28,8 +28,11 @@ function Content({
       <Carousel/>
       <p className="content__count">
         Добавлено в Избранное:&nbsp;
-        <span className="content__count-number">
-          {plural(favoriteCardsState.length, "%d отель", "%d отеля", "%d отелей")}
+        <span>
+          <span className="content__number">
+            {favoriteCardsState.length}
+          </span>
+          {plural(favoriteCardsState.length, " отель", " отеля", " отелей")}
         </span>
       </p>
       <Hotels

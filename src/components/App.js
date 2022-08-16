@@ -32,7 +32,7 @@ function App() {
   });
   const [cardsState, setCardsState] = useState();
   const [favoriteCardsState, setFavoriteCardsState] = useState([]);
-  const [sortState, setSortState] = useState({ rating: 1, price: 0});
+  const [sortState, setSortState] = useState({ rating: true});
 
   useEffect(() => {
     getHotels(formSearchState.location, formSearchState.checkIn, formSearchState.days)

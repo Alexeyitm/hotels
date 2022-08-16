@@ -41,7 +41,7 @@
     font-size: 17px;
     line-height: 22px;
     letter-spacing: -0.408px;
-    color: variables.$second-color;
+    color: variables.$text-color;
   }
 
   &__like {
@@ -54,6 +54,11 @@
     &_inactive {
       background: variables.$like no-repeat;
       background-size: contain;
+
+      &:hover {
+        background: variables.$like-hover no-repeat;
+        background-size: contain;
+      }
     }
   }
 
@@ -117,6 +122,6 @@
     line-height: 22px;
     text-align: right;
     letter-spacing: -0.408px;
-    color: variables.$second-color;
+    color: variables.$text-color;
   }
 }
