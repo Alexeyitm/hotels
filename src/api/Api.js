@@ -20,5 +20,5 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'http://engine.hotellook.com/api/v2/cache.json',
+  baseUrl: 'https://engine.hotellook.com/api/v2/cache.json',
 });
