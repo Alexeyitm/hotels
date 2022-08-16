@@ -7,6 +7,20 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+
+  @media screen and (max-width: 1100px) {
+    & {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    & {
+      padding: 16px 0;
+      margin: 0 auto;
+    }
+  }
 
   &::after {
     content: "";
@@ -30,6 +44,12 @@
     position: relative;
     background-color: #E5E5E5;
     border-radius: 50%;
+
+    @media screen and (max-width: 710px) {
+      & {
+        display: none;
+      }
+    }
 
     &:after {
       content: "";

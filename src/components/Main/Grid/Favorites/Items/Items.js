@@ -21,7 +21,6 @@ function Items({
   
   return (
     <div className="items">
-      {console.log(sortState)}
       {sortState.rating === true ? highRating(cards) :
       sortState.rating === false ? lowRating(cards) :
       sortState.price === true ? highPrice(cards) :

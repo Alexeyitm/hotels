@@ -20,7 +20,7 @@ function Carousel() {
     <div className="carousel">
       <Swiper
         className="swiper"
-        slidesPerView={3.45}
+        slidesPerView="auto"
         spaceBetween={12}
         freeMode={true}
         modules={[FreeMode]}

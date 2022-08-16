@@ -8,8 +8,20 @@
   flex-wrap: wrap;
   margin-bottom: 30px;
 
+  @media screen and (max-width: 1100px) {
+    & {
+      width: 95%;
+    }
+  }
+
   &_main {
     width: 480px;
+
+    @media screen and (max-width: 1100px) {
+      & {
+        width: 95%;
+      }
+    }
   }
 
   &:last-child {
@@ -42,6 +54,19 @@
     line-height: 22px;
     letter-spacing: -0.408px;
     color: variables.$text-color;
+
+    @media screen and (max-width: 1100px) {
+      & {
+        max-width: 90%;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      & {
+        max-width: 80%;
+        font-size: 14px;
+      }
+    }
   }
 
   &__like {
@@ -80,26 +105,36 @@
     width: 99px;
     height: 17px;
 
+    @media screen and (max-width: 380px) {
+      & {
+        width: 85px;
+        height: 13px;
+      }
+    }
+
     &_one {
       background: url(../../images/one-star.svg) no-repeat;
+      background-size: contain;
     }
 
     &_two {
       background: url(../../images/two-stars.svg) no-repeat;
+      background-size: contain;
     }
 
     &_three {
-      width: 99px;
-      height: 17px;
       background: url(../../images/three-stars.svg) no-repeat;
+      background-size: contain;
     }
 
     &_four {
       background: url(../../images/four-stars.svg) no-repeat;
+      background-size: contain;
     }
 
     &_five {
       background: url(../../images/five-stars.svg) no-repeat;
+      background-size: contain;
     }
   }
 
