@@ -37,6 +37,15 @@
     font-size: 24px;
     line-height: 28px;
     color: variables.$second-text-color;
+
+    @media screen and (max-width: 550px) {
+      & {
+        position: absolute;
+        top: -40px;
+        right: -20px;
+        width: 170px;
+      }
+    }
   }
 
   &__count {
