@@ -16,9 +16,10 @@ function Content({
   return (
     <div className="content">
       <h2 className="content__title">
-        Отели:
-        <span className="content__place">{dataState.location}</span>
-        <span className="content__date">{date[0]}</span>
+          Отели:
+          <span className="content__place">{dataState.location}</span>
+          <span className="content__date">{date[0]}</span>
+        </h2>
         <Carousel/>
         <p className="content__count">
           Добавлено в Избранное:&nbsp;
@@ -31,7 +32,6 @@ function Content({
           date={date}
           days={dataState.days}
         />
-      </h2>
     </div>
   );
 }

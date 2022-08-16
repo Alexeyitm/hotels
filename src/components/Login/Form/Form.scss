@@ -17,6 +17,12 @@
   flex-direction: column;
   box-sizing: border-box;
 
+  @media screen and (max-width: 767px) {
+    & {
+      width: 300px;
+    }
+  }
+
   &__title {
     
     font-weight: 500;
@@ -69,10 +75,16 @@
     &_invalid {
       color: variables.$invalid-color;
     }
+
+    @media screen and (max-width: 767px) {
+      & {
+        width: 240px;
+      }
+    }
   }
 
   &__button {
-    padding: 7px;
+    padding: 0;
     gap: 10px;
     width: 345px;
     height: 50px;
@@ -87,5 +99,11 @@
     color: variables.$main-color;
     margin-top: auto;
     cursor: variables.$cursor-hover;
+
+    @media screen and (max-width: 767px) {
+      & {
+        width: 240px;
+      }
+    }
   }
 }

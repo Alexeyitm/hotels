@@ -6,6 +6,27 @@
   grid-template-rows: 410px 472px;
   grid-gap: 24px;
   grid-template-areas: 
-            "search result"
-            "favorites result"
+    "search result"
+    "favorites result";
+
+  @media screen and (max-width: 1100px) {
+    & {
+      grid-template-columns: 320px 320px;
+      grid-template-rows: 410px 800px;
+      grid-template-areas: 
+        "search favorites"
+        "result result";
+    }
+  }
+
+  @media screen and (max-width: 710px) {
+    & {
+      grid-template-columns: 90%;
+      grid-template-rows: 410px 800px 410px;
+      grid-template-areas: 
+        "search"
+        "result"
+        "favorites";
+    }
+  }
 }

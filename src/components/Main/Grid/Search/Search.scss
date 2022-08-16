@@ -35,6 +35,12 @@
     &:nth-child(4) {
       margin-bottom: 20px;
     }
+
+    @media screen and (max-width: 1100px) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &__button {
@@ -43,6 +49,7 @@
     background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
     border: 0;
+    padding: 0;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
@@ -50,5 +57,11 @@
     color: variables.$main-color;
     margin-top: auto;
     cursor: variables.$cursor-hover;
+
+    @media screen and (max-width: 1100px) {
+      & {
+        width: 100%;
+      }
+    }
   }
 }

@@ -11,6 +11,12 @@
     line-height: 28px;
     color: variables.$second-color;
     margin: 32px 0 32px 32px;
+
+    @media screen and (max-width: 440px) {
+      & {
+        margin: 32px 0 12px 12px;
+      }
+    }
   }
 
   &__button {
@@ -26,6 +32,12 @@
     margin: 36px 68px 0 0;
     position: relative;
     cursor: variables.$cursor-hover;
+
+    @media screen and (max-width: 440px) {
+      & {
+        margin-right: 40px;
+      }
+    }
   }
 
   &__exit {
@@ -36,5 +48,11 @@
     position: absolute;
     right: -33px;
     top: 2px;
+
+    @media screen and (max-width: 440px) {
+      & {
+        right: -23px;
+      }
+    }
   }
 }

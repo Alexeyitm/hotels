@@ -1,6 +1,12 @@
 .items {
-  width: 310px;
+  width: 320px;
   height: 288px;
   margin-top: 32px;
   overflow-y: auto;
+
+  @media screen and (max-width: 1100px) {
+    & {
+      width: 103%;
+    }
+  }
 }
