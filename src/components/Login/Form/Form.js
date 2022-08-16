@@ -24,8 +24,14 @@ function Form({ setCookie }) {
   }
 
   return (
-    <form className="form" name="login" id="login">
-      <h2 className="form__title">Simple Hotel Check</h2>
+    <form 
+      className="form" 
+      name="login" 
+      id="login"
+    >
+      <h2 className="form__title">
+        Simple Hotel Check
+      </h2>
 
       <label
         className={"form__label" + (!validEmail ? " form__label_invalid" : "")}

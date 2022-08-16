@@ -5,9 +5,7 @@ import Form from './Form/Form';
 function Login({ setCookie }) {
   return (
     <div className="login">
-      <Form
-        setCookie={setCookie}
-      />
+      <Form setCookie={setCookie}/>
     </div>
   );
 }
