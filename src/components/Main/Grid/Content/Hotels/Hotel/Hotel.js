@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import './Hotel.scss';
 import makePrice from '../../../../../.././scripts/makePrice';
 const plural = require('plural-ru');
@@ -10,7 +10,22 @@ function Hotel({
   favoriteCardsState,
   setFavoriteCardsState,
 }) {
+
   const [likeState, setLikeState] = useState(false);
+
+  // eslint-disable-next-line
+  useEffect(() => {
+    setLikeState(false);
+    checkRenderLike();
+  });
+
+  const checkRenderLike = () => {
+    favoriteCardsState.forEach(favoriteCard => {
+      if (favoriteCard.hotelId === card.hotelId) {
+        setLikeState(true);
+      }
+    })
+  }
 
   const addFavoriteCard = () => {
     setLikeState(true);
@@ -24,7 +39,7 @@ function Hotel({
     setFavoriteCardsState(favoriteCardsState.filter(favoriteCard => favoriteCard.hotelId !== card.hotelId));
   }
   
-  const handleClickLike = () =>{
+  const handleClickLike = () => {
     !likeState ? addFavoriteCard() : removeFavoriteCard();
   }
 

@@ -9,6 +9,8 @@ function Hotels({
   date,
   days
 }) {
+
+
   
   return (
     <div className="hotels">

@@ -5,7 +5,8 @@ import Items from './Items/Items';
 function Favorites({
   sortState,
   setSortState,
-  favoriteCardsState
+  favoriteCardsState,
+  setFavoriteCardsState
 }) {
 
   const handleClickRating = () => {
@@ -39,7 +40,10 @@ function Favorites({
           ></div>
         </button>
       </div>
-      <Items favoriteCardsState={favoriteCardsState}/>
+      <Items
+        favoriteCardsState={favoriteCardsState}
+        setFavoriteCardsState={setFavoriteCardsState}
+      />
     </div>
   );
 }

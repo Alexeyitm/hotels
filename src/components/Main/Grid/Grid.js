@@ -26,6 +26,7 @@ function Grid({
         sortState={sortState}
         setSortState={setSortState}
         favoriteCardsState={favoriteCardsState}
+        setFavoriteCardsState={setFavoriteCardsState}
       />
       <Content
         cardsState={cardsState}
