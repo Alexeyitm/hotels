@@ -44,7 +44,6 @@ function Favorites({
       </div>
       <Items
         sortState={sortState}
-        setSortState={setSortState}
         favoriteCardsState={favoriteCardsState}
         setFavoriteCardsState={setFavoriteCardsState}
       />

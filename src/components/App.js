@@ -10,14 +10,7 @@ import makeCheckOut from '../scripts/makeCheckOut';
 
 function App() {
 
-  const getHotels = (location, checkIn, days) => {
-    const checkOut = makeCheckOut(checkIn, days);
-    api
-      .getHotels(location, checkIn, checkOut)
-      .then(res => setCardsState(res))
-      .then(() => setDataState({location, checkIn, days}))
-      .catch((err) => console.log(err))
-  }
+
 
   const [cookies, setCookie, removeCookie] = useCookies(['auth']);;
   const [formSearchState, setFormSearchState] = useState({
@@ -33,6 +26,15 @@ function App() {
   const [cardsState, setCardsState] = useState();
   const [favoriteCardsState, setFavoriteCardsState] = useState([]);
   const [sortState, setSortState] = useState({ rating: true});
+
+  const getHotels = (location, checkIn, days) => {
+    const checkOut = makeCheckOut(checkIn, days);
+    api
+      .getHotels(location, checkIn, checkOut)
+      .then(res => setCardsState(res))
+      .then(() => setDataState({location, checkIn, days}))
+      .catch((err) => console.log(err))
+  }
 
   useEffect(() => {
     getHotels(formSearchState.location, formSearchState.checkIn, formSearchState.days)

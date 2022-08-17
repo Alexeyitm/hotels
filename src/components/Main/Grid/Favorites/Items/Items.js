@@ -5,7 +5,6 @@ import { highRating, lowRating, highPrice, lowPrice } from '../../../../.././scr
 
 function Items({
   sortState,
-  setSortState,
   favoriteCardsState,
   setFavoriteCardsState
 }) {

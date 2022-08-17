@@ -1,4 +1,4 @@
-@use '../../../../../../styles/block/card.scss';
+@use '../../../../../../styles/blocks/card.scss';
 
 .hotel {
   width: 568px;
@@ -44,6 +44,12 @@
     position: relative;
     background-color: #E5E5E5;
     border-radius: 50%;
+
+    @media screen and (max-width: 1100px) {
+      & {
+        margin-right: 20px;
+      }
+    }
 
     @media screen and (max-width: 710px) {
       & {
