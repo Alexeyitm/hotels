@@ -11,5 +11,12 @@
   line-height: 20px;
   color: variables.$main-color;
   margin-top: auto;
-  cursor: variables.$cursor-hover;
+
+  &:hover:not([disabled]) {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
+    cursor: variables.$cursor-hover;
+  }
+
+  &:active:not([disabled]) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);  }
 }
